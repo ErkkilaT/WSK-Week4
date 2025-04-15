@@ -4,21 +4,21 @@ import RegisterForm from '../components/RegisterForm';
 
 const Login = () => {
   const [hasAccount, setHasAccount] = useState(true);
-  if (hasAccount) {
-    return (
-      <>
-        <button onClick={() => setHasAccount(false)}>Register</button>
-        <LoginForm />
-      </>
-    );
-  } else {
-    return (
-      <>
-        <button onClick={() => setHasAccount(true)}>Login</button>
-        <RegisterForm />
-      </>
-    );
-  }
+  return hasAccount ? (
+    <>
+      <LoginForm />
+      <button onClick={() => setHasAccount(false)}>
+        Don't have an account?
+      </button>
+    </>
+  ) : (
+    <>
+      <RegisterForm />
+      <button onClick={() => setHasAccount(true)}>
+        Already have an account?
+      </button>
+    </>
+  );
 };
 
 export default Login;
