@@ -40,7 +40,7 @@ const useAuthentication = () => {
       import.meta.env.VITE_AUTH_API + '/auth/login',
       fetchOptions,
     );
-    window.localStorage.setItem('token', loginResult.token);
+
     return loginResult;
   };
   return {postLogin};
@@ -57,7 +57,7 @@ const useUser = () => {
       import.meta.env.VITE_AUTH_API + '/users/token',
       fetchOptions,
     );
-    console.log('userData', userData);
+
     return userData;
   };
 
