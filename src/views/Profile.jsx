@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import {useUser} from '../hooks/apiHooks';
 import {useState, useEffect} from 'react';
 
-const Profile = (props) => {
+const Profile = () => {
   const [user, setUser] = useState(null);
 
   const {getUserByToken} = useUser();
@@ -18,7 +18,6 @@ const Profile = (props) => {
     fetchUser();
   }, []);
 
-  console.log('user', user);
   return (
     <>
       <h2>Profile</h2>
