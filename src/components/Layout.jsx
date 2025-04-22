@@ -11,27 +11,52 @@ const Layout = () => {
   return (
     <div>
       <nav>
-        <ul>
+        <ul className="flex justify-end overflow-hidden bg-fuchsia-900">
           <li>
-            <Link to="/">Home</Link>
+            <Link
+              className="block p-4 text-center text-fuchsia-50 hover:bg-fuchsia-600"
+              to="/"
+            >
+              Home
+            </Link>
           </li>
 
           {user ? (
             <>
               <li>
-                <Link to="/profile">Profile</Link>
+                <Link
+                  className="block p-4 text-center text-fuchsia-50 hover:bg-fuchsia-600"
+                  to="/profile"
+                >
+                  Profile
+                </Link>
               </li>
               <li>
-                <Link to="/upload">Upload</Link>
+                <Link
+                  className="block p-4 text-center text-fuchsia-50 hover:bg-fuchsia-600"
+                  to="/upload"
+                >
+                  Upload
+                </Link>
               </li>
               <li>
-                <Link to="/logout">Logout</Link>
+                <Link
+                  className="block p-4 text-center text-fuchsia-50 hover:bg-fuchsia-600"
+                  to="/logout"
+                >
+                  Logout
+                </Link>
               </li>
             </>
           ) : (
             <>
               <li>
-                <Link to="/login">Login</Link>
+                <Link
+                  className="block p-4 text-center text-fuchsia-50 hover:bg-fuchsia-600"
+                  to="/login"
+                >
+                  Login
+                </Link>
               </li>
             </>
           )}

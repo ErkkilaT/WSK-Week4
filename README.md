@@ -1,6 +1,6 @@
 # React + Vite
 
-Open [website](https://users.metropolia.fi/~teemuerk/WebSovellusKehitys25k/Week5/upload)
+Open [website](https://users.metropolia.fi/~teemuerk/WebSovellusKehitys25k/Week5/tailwind)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

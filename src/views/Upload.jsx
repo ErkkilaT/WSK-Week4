@@ -2,6 +2,7 @@ import {useState} from 'react';
 import useForm from '../hooks/formHooks.js';
 import {useFile, useMedia} from '../hooks/apiHooks.js';
 import {useNavigate} from 'react-router';
+import TextInput from '../components/ui/TextInput.jsx';
 const Upload = () => {
   const [file, setFile] = useState(null);
 
@@ -34,9 +35,17 @@ const Upload = () => {
     <>
       <h1>Upload</h1>
       <form onSubmit={handleSubmit}>
+        <TextInput
+          label="Title"
+          name="title"
+          type="text"
+          id="title"
+          onChange={handleInputChange}
+        />
         <div>
           <label htmlFor="title">Title</label>
-          <input
+          <TextInput
+            label="Title"
             name="title"
             type="text"
             id="title"
