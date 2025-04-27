@@ -5,9 +5,13 @@ const MediaRow = (props) => {
   const {item, setSelectedItem} = props;
   // const handleClick = () => setSelectedItem(item);
   return (
-    <tr key={item.media_id}>
+    <tr className="*:border-1 *:border-[#ccc] *:p-4" key={item.media_id}>
       <td>
-        <img src={item.thumbnail} alt={item.title} />
+        <img
+          src={item.thumbnail}
+          alt={item.title}
+          className="h-52 object-cover"
+        />
       </td>
       <td>{item.title}</td>
       <td>{item.username}</td>
@@ -17,7 +21,11 @@ const MediaRow = (props) => {
       <td>{item.media_type}</td>
       <td>
         {/* <button onClick={handleClick}>View</button> */}
-        <Link to="/single" state={{item}}>
+        <Link
+          to="/single"
+          state={{item}}
+          className="text-white- my-2 rounded-xl border-2 bg-fuchsia-700 p-2.5 hover:cursor-pointer hover:bg-fuchsia-600 hover:text-black"
+        >
           Show
         </Link>
       </td>

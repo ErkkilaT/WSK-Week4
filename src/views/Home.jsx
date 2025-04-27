@@ -10,10 +10,12 @@ const Home = () => {
 
   return (
     <>
-      <h2>My Media</h2>
-      <table>
+      <h2 className="my-4 flex flex-col items-center text-2xl font-bold">
+        My Media
+      </h2>
+      <table className="">
         <thead>
-          <tr>
+          <tr className="*:border-1 *:border-[#ccc] *:p-4">
             <th>Thumbnail</th>
             <th>Title</th>
             <th>Owner</th>

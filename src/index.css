@@ -16,5 +16,6 @@
   #root {
     max-width: var(--container-7xl);
     padding: calc(var(--spacing) * 8);
+    margin: 0 auto;
   }
 }

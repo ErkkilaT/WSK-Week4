@@ -19,8 +19,8 @@ const Profile = () => {
   }, []);
 
   return (
-    <>
-      <h2>Profile</h2>
+    <div className="flex flex-col items-center">
+      <h2 className="my-3 text-3xl font-bold">Profile</h2>
       {user && (
         <>
           <p>Username: {user.username}</p>
@@ -30,7 +30,7 @@ const Profile = () => {
           </p>
         </>
       )}
-    </>
+    </div>
   );
 };
 
