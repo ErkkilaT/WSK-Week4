@@ -44,7 +44,12 @@ const LoginForm = () => {
           autoComplete="current-password"
         />
 
-        <button type="submit">Login</button>
+        <button
+          type="submit"
+          className="text-white- my-2 rounded-xl border-2 bg-fuchsia-700 p-2.5 hover:cursor-pointer hover:bg-fuchsia-600 hover:text-black"
+        >
+          Login
+        </button>
       </form>
     </>
   );
