@@ -12,6 +12,7 @@ import Profile from './views/Profile.jsx';
 import Single from './views/Single.jsx';
 import Login from './views/Login.jsx';
 import Logout from './views/Logout.jsx';
+import Modify from './views/Modify.jsx';
 import {UserProvider} from './contexts/UserContext';
 import ProtectedRoute from './components/ProtectedRoute.jsx';
 
@@ -41,6 +42,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/logout" element={<Logout />} />
+            <Route path="/modify" element={<Modify />} />
           </Route>
         </Routes>
       </UserProvider>

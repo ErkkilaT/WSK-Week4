@@ -3,8 +3,9 @@ import {Link} from 'react-router';
 import {useUserContext} from '../hooks/contextHooks';
 
 const MediaRow = (props) => {
-  const {item, setSelectedItem} = props;
+  const {item, setSelectedItem, deleteMedia} = props;
   const {user, handleAutoLogin} = useUserContext();
+  //const {deleteMedia, modifyMedia} = useMedia();
   // const handleClick = () => setSelectedItem(item);
   return (
     <tr className="*:border-1 *:border-[#ccc] *:p-4" key={item.media_id}>
@@ -33,20 +34,20 @@ const MediaRow = (props) => {
         {user &&
           (user.user_id == item.user_id || user.level_name == 'Admin') && (
             <>
-              <button
-                type="button"
+              <Link
+                to="/modify"
+                state={{item}}
                 className="text-white- my-2 mt-6 rounded-xl border-2 bg-fuchsia-700 p-2.5 hover:cursor-pointer hover:bg-fuchsia-600 hover:text-black"
-                onClick={() => {
-                  console.log('Modify clicked');
-                }}
               >
                 Modify
-              </button>
+              </Link>
+
               <button
                 type="button"
                 className="text-white- my-2 rounded-xl border-2 bg-fuchsia-700 p-2.5 hover:cursor-pointer hover:bg-fuchsia-600 hover:text-black"
                 onClick={() => {
-                  console.log('Delete clicked');
+                  const token = localStorage.getItem('token');
+                  deleteMedia(token, item.media_id);
                 }}
               >
                 Delete

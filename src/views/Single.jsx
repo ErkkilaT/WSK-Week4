@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import {Link, useLocation, useNavigate} from 'react-router';
 
-const Single = (props) => {
+const Single = () => {
   const {state} = useLocation();
   const item = state.item;
   const navigate = useNavigate();

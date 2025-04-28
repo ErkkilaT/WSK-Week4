@@ -48,10 +48,10 @@ const useMedia = () => {
       method: 'DELETE',
       headers: {
         Authorization: 'Bearer: ' + token,
-        'Content-Type': 'application/json',
       },
     };
-
+    console.log(id);
+    console.log(token);
     const mediaData = await fetchData(
       import.meta.env.VITE_MEDIA_API + '/media/' + id,
       fetchOptions,
